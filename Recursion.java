@@ -1,5 +1,5 @@
 public class Recursion {
-    public static int powerOfTwo(double n) {
+    public static int two(double n) {
         if (n == 1) {
             return 1;
         }
@@ -7,7 +7,7 @@ public class Recursion {
             return 0;
         }
         else {
-            return powerOfTwo(n / 2);
+            return two(n / 2);
         }
     }
 
@@ -59,7 +59,7 @@ class HomeworkRecursionMain {
 
         double n = 8192;
 
-        if (Recursion.powerOfTwo(n) == 1) {
+        if (Recursion.two(n) == 1) {
             System.out.println("YES");
         } else {
             System.out.println("NO");
@@ -73,7 +73,7 @@ class HomeworkRecursionMain {
         System.out.println(fib);
 
 
-        String str = "Tenet";
+        String str = "Palindrome";
         System.out.println(Recursion.palindrome(str));
 
     }
