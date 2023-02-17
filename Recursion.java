@@ -22,13 +22,42 @@ public class Recursion {
         }
     }
 
-}
+    public static long fibRecursion(long n) {
 
+        if (n == 1) {
+            return 1;
+        }
+        else if (n == 2) {
+            return 1;
+        }
+        else {
+            return fibRecursion(n - 1) + fibRecursion(n - 2);
+        }
+    }
+
+
+    public static boolean palindrome(String str) {
+
+        str = str.toLowerCase();
+
+        if (str.charAt(0) != str.charAt(str.length() - 1)) {
+            return false;
+        }
+        else if (str.length() == 1) {
+            return true;
+        }
+        else {
+            return palindrome(str.substring(1, str.length() - 1));
+        }
+
+
+    }
+}
 
 class HomeworkRecursionMain {
     public static void main(String[] args) {
 
-        double n = 6132;
+        double n = 8192;
 
         if (Recursion.powerOfTwo(n) == 1) {
             System.out.println("YES");
@@ -39,6 +68,13 @@ class HomeworkRecursionMain {
 
         int sum = Recursion.sumOfDigits((int) n);
         System.out.println(sum);
+
+        long fib = Recursion.fibRecursion(20);
+        System.out.println(fib);
+
+
+        String str = "Tenet";
+        System.out.println(Recursion.palindrome(str));
 
     }
 
